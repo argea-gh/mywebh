@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Produk — Herbaprima | Solusi Herbal Halal</title>
+  <meta name="description" content="Daftar lengkap produk herbal halal Herbaprima: madu premium, minuman sehat, minyak herba, dan perawatan alami." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- ✅ HEADER (pakai template di atas) -->
+  <header class="header sticky">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="https://lh3.googleusercontent.com/d/1xp5ce29F3f-nVa_IEx925L-8YrXXbHo6" alt="Herbaprima Logo" />
+        <span class="site-title">Herbaprima</span>
+      </a>
+      <nav class="nav-menu" id="navMenu">
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="produk.html">Produk</a></li>
+          <li><a href="edukasi.html">Edukasi</a></li>
+          <li><a href="tentang.html">Tentang</a></li>
+          <li><a href="https://wa.me/6282241900467" target="_blank" class="btn-whatsapp btn-header">🟢 WhatsApp</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" style="padding: 80px 0; background: linear-gradient(135deg, #f0f9f1 0%, #e8f5e9 100%);">
+    <div class="container">
+      <h1 class="hero-headline">📦 Semua Produk Kami</h1>
+      <p class="hero-subheadline">Solusi herbal halal untuk kesehatan harian Anda dan keluarga</p>
+    </div>
+  </section>
+
+  <!-- PRODUK SECTION -->
+  <section class="section all-products">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Kategori Produk</h2>
+        <div class="category-filter">
+          <button class="filter-btn active" data-category="all">Semua</button>
+          <button class="filter-btn" data-category="Minuman Sehat">Minuman Sehat</button>
+          <button class="filter-btn" data-category="Madu Premium">Madu Premium</button>
+          <button class="filter-btn" data-category="Minyak Herba">Minyak Herba</button>
+          <button class="filter-btn" data-category="Aneka Herbal">Aneka Herbal</button>
+          <button class="filter-btn" data-category="Perawatan Kulit">Perawatan Kulit</button>
+          <button class="filter-btn" data-category="Perawatan Pribadi">Perawatan Pribadi</button>
+        </div>
+      </div>
+
+      <div class="products-grid" id="productsGrid">
+        <!-- Diisi oleh JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="https://lh3.googleusercontent.com/d/1xp5ce29F3f-nVa_IEx925L-8YrXXbHo6" alt="Herbaprima" class="footer-logo" />
+          <p>Solusi herbal halal, aman, dan edukatif untuk keluarga Indonesia.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Link</h4>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="produk.html">Produk</a></li>
+            <li><a href="edukasi.html">Edukasi</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontak</h4>
+          <p>📞 <a href="tel:+6282241900467">0822-4190-0467</a></p>
+          <p>🕒 Jam Layanan: 08.00–20.00 WIB</p>
+          <a href="https://wa.me/6282241900467" class="btn-whatsapp">🟢 WhatsApp Kami</a>
+        </div>
+        <div class="footer-col">
+          <h4>Sertifikasi</h4>
+          <div class="cert-badges">
+            <img src="https://upload.wikimedia.org/wikipedia/id/thumb/0/09/Logo_MUI.svg/1200px-Logo_MUI.svg.png" alt="Halal MUI" class="cert-badge" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/BPOM_Logo.svg/1200px-BPOM_Logo.svg.png" alt="BPOM" class="cert-badge" />
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Herbaprima. All rights reserved. | *Produk tidak menggantikan obat dokter.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP & SCROLL TO TOP -->
+  <a href="https://wa.me/6282241900467" target="_blank" class="whatsapp-float">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- MODAL & CART PANEL (sama seperti index.html) -->
+  <div class="modal" id="productModal">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <div class="modal-body" id="modalBody"></div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" id="modalClose2">Tutup</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="cart-panel" id="cartPanel">
+    <div class="cart-header">
+      <h3>Keranjang Saya</h3>
+      <button class="cart-close" id="cartClose">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="cart-total">Total: <span id="cartTotal">Rp0</span></div>
+      <a href="https://wa.me/6282241900467" target="_blank" class="btn btn-primary" id="checkoutBtn">Lanjut ke WhatsApp</a>
+    </div>
+  </div>
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <!-- SCRIPTS -->
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Render produk saat halaman produk dimuat
+    document.addEventListener('DOMContentLoaded', () => {
+      // Render semua produk (tanpa rekomendasi khusus)
+      renderProducts('all');
+
+      // Filter kategori
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          renderProducts(btn.dataset.category);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
