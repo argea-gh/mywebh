@@ -444,3 +444,12 @@ document.getElementById('cartAccessBtn')?.addEventListener('click', (e) => {
   e.preventDefault();
   showCartPanel();
 });
+
+// Tambahan edit ikon belanja floating
+// Buka keranjang saat klik ikon
+
+document.getElementById('cartIconBtn')?.addEventListener('click', (e) => {
+  e.preventDefault();
+  cartPanel.classList.add('active');
+  cartOverlay.style.display = 'block';
+});
