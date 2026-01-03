@@ -109,20 +109,40 @@ function openProductModal(product) {
     <div class="product-modal-header">
       <img src="${product.image}" alt="${product.name}" />
       <div class="modal-info">
-        <h2>${product.name}</h2>
-        <div class="price-large">${priceFormatted}</div>
-        <p><strong>Kategori:</strong> ${product.category}</p>
-        <p>${product.description}</p>
-        
-        <h3>Manfaat Utama</h3>
-        <ul>
-          ${product.benefits.map(b => `<li>✅ ${b}</li>`).join('')}
-        </ul>
-        
-        <h3>Komposisi</h3>
-        <p>${product.composition}</p>
-      </div>
-    </div>
+  <div class="info-section">
+    <span class="info-label">Kategori</span>
+    <p class="info-value">${product.category}</p>
+  </div>
+  
+  <div class="info-section">
+    <h2 class="product-name">${product.name}</h2>
+  </div>
+
+  <div class="info-section">
+    <span class="info-label">Deskripsi</span>
+    <p class="info-value">${product.description || '—'}</p>
+  </div>
+
+  <div class="info-section">
+    <span class="info-label">Manfaat Utama</span>
+    <ul class="benefits-list">
+      ${product.benefits && product.benefits.length 
+        ? product.benefits.map(b => `<li>✅ ${b}</li>`).join('')
+        : '<li>—</li>'
+      }
+    </ul>
+  </div>
+
+  <div class="info-section">
+    <span class="info-label">Komposisi</span>
+    <p class="info-value">${product.composition || '—'}</p>
+  </div>
+
+  <div class="info-section price-section">
+    <span class="info-label">Harga</span>
+    <div class="price-large">${formatRupiah(product.price)}</div>
+  </div>
+</div>
     
     <div class="btn-group">
   <button class="btn btn-primary" id="addToCartBtn" data-id="${product.id}">
