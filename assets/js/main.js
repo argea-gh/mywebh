@@ -207,6 +207,16 @@ const totalCount = cart.reduce((sum, item) => sum + item.quantity, 0);
 document.getElementById('cartBadge').textContent = totalCount || '';
 document.getElementById('cartBadge').style.display = totalCount > 0 ? 'flex' : 'none';
 // End of Tambahan
+
+// Edit ikon keranjang belanja float atas
+// Di akhir fungsi loadCart():
+
+const totalCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+const badge = document.getElementById('cartBadge');
+if (badge) {
+  badge.textContent = totalCount;
+  badge.classList.toggle('show', totalCount > 0);
+}
 }
 
 function saveCart(cart) {
