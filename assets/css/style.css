@@ -1331,7 +1331,7 @@ body {
   /* Jika layar sangat kecil, tumpuk vertikal */
   @media (max-width: 480px) {
     .cart-access-btn {
-      bottom: 30px;
+      top: 60px;
       right: 30px;
     }
     .whatsapp-float {
